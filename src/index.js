@@ -13,6 +13,7 @@ import './index.css';
 function getSavedTodos(){
     console.log('saved todos todos');
     let todos = JSON.parse(window.localStorage.getItem('todos'));
+    if (todos == null) todos = [];
     console.log(todos);
     return ({todos: todos})
 }
